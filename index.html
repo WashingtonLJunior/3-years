@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comemoração de 3 Anos de Namoro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Música de Fundo -->
+    <audio id="myAudio" autoplay>
+        <source src="sound/videoplayback.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Título -->
+    <h1>Comemorando nossos 3 anos juntos</h1>
+
+    <!-- Carrossel de Fotos -->
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <img src="img/20230426_221706.jpg" alt="Foto 1">
+            <img src="img/IMG_20210312_220825_310.jpg" alt="Foto 2">
+            <img src="img/IMG_20221110_202906_302.jpg" alt="Foto 3">
+            <img src="img/IMG_20230930_171922_579.webp" alt="Foto 4">
+            <img src="img/IMG_20231001_094400_008.webp" alt="Foto 5">
+            <img src="img/VideoCapture_20231110-001731.jpg" alt="Foto 6">
+            <img src="img/IMG_20240101_013712_728.webp" alt="Foto 7">
+            <img src="img/IMG_20240406_211650_638.webp" alt="Foto 8">
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Texto de Introdução -->
+    <div class="intro-text">
+        <p>Nosso amor tem sido uma linda jornada e estamos celebrando cada momento. Esses 3 anos foram cheios de emoções que nem mesmo nós sabemos o que ocorreu, realizamos sonhos e evoluímos muito juntos. Agora, chegou o momento de dar o próximo passo...</p>
+    </div>
+    
+    <!-- Pedido de Casamento -->
+    <div class="message" id="messageDiv">
+        <p class="question">Você quer casar comigo?</p>
+        <button id="acceptButton" onclick="acceptMarriage()">Aceitar Pedido</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
