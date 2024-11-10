@@ -5,6 +5,305 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comemoração de 3 Anos de Namoro</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe7f0);
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Efeito de Corações e Estilo Profissional no Título */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    color: #ff4081;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+}
+
+h1::before, h1::after {
+    content: "💕";
+    font-size: 1.5em;
+    color: #ff4081;
+    padding: 0 10px;
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo do Carrossel com Efeito de Sombras */
+.carousel-container {
+    width: 100%;
+    max-width: 800px; /* Tamanho máximo do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Oculta as imagens que saem da área visível */
+    border-radius: 10px; /* Bordas arredondadas para um efeito mais suave */
+}
+
+.carousel-container:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Suaviza a transição */
+}
+
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Impede que as imagens se redimensionem */
+}
+
+/* Botões do Carrossel */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(255, 64, 129, 0.7);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 64, 129, 0.9);
+}
+
+/* Estilo para o Texto de Introdução */
+.intro-text {
+    text-align: center;
+    font-size: 1.4em; /* Aumentando o tamanho da fonte */
+    color: #000000; /* Cor mais suave para o texto */
+    margin: 40px auto;
+    max-width: 700px; /* Aumentando a largura máxima para maior fluidez */
+    padding: 30px;
+    background: linear-gradient(135deg, #ffd1dc, #ffe7f0); /* Gradiente suave para o fundo */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+    font-family: 'Georgia', serif; /* Fonte serifada mais elegante */
+    line-height: 1.8; /* Aumentando o espaçamento entre as linhas */
+    animation: fadeIn 3s ease-in-out;
+    border: 1px solid #ff4081; /* Borda fina na cor rosa */
+}
+
+/* Efeito de Fade-In para o Texto de Introdução */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Adicionando um toque de animação de "escorregamento" */
+.intro-text p {
+    position: relative;
+    animation: slideIn 2s ease-out;
+}
+
+/* Animação de deslizar para cima */
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Estilização do Título e Mensagem do Pedido */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    color: #ff4081;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+}
+
+h1::before, h1::after {
+    content: "💕";
+    font-size: 1.5em;
+    color: #ff4081;
+    padding: 0 10px;
+}
+
+/* Botão de Aceitar Pedido */
+#acceptButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background: linear-gradient(135deg, #ff69b4, #ff4081);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#acceptButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 64, 129, 0.5);
+}
+
+#acceptButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(255, 64, 129, 0.3);
+}
+
+/* Estilização do Ícone de Coração no Botão */
+.heart-icon {
+    font-size: 1.2em;
+}
+
+
+/* Mensagem e Checkbox */
+.message {
+    text-align: center;
+    margin: 20px 0;
+    color: #ff4081;
+    font-size: 1.3em;
+}
+
+.question {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.checkbox-container input[type="checkbox"] {
+    transform: scale(1.3);
+    accent-color: #ff4081;
+}
+
+/* Estilização do Botão de Aceitar Pedido */
+#acceptButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background: linear-gradient(135deg, #ff69b4, #ff4081);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+}
+#acceptButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 64, 129, 0.5);
+}
+
+#acceptButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(255, 64, 129, 0.3);
+}
+
+/* Estilização do Ícone de Coração no Botão */
+.heart-icon {
+    font-size: 1.2em;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .carousel-container {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* Efeito de LED para o Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+    animation: ledGlow 2s infinite alternate;
+}
+
+/* Animação do Efeito de LED */
+@keyframes ledGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 64, 129, 0.4), 0 0 20px rgba(255, 182, 193, 0.5), 0 0 30px rgba(255, 64, 129, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 64, 129, 0.6), 0 0 30px rgba(255, 182, 193, 0.7), 0 0 45px rgba(255, 64, 129, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 64, 129, 0.8), 0 0 40px rgba(255, 182, 193, 1), 0 0 60px rgba(255, 64, 129, 1);
+    }
+}
+
+    </style>
 </head>
 <body>
 
@@ -45,6 +344,108 @@
         <button id="acceptButton" onclick="acceptMarriage()">Aceitar Pedido</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript para controle do carrossel
+let currentSlide = 0;
+
+function showSlide(index) {
+    const carousel = document.getElementById("carousel");
+    const slides = carousel.children;
+    const totalSlides = slides.length;
+
+    currentSlide = (index + totalSlides) % totalSlides;
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Função para mostrar a animação de anel e fogos de artifício
+function showAnimation() {
+    const checkbox = document.getElementById("wantsToMarry");
+    const ringAnimation = document.getElementById("ring-animation");
+    const fireworksAnimation = document.getElementById("fireworks-animation");
+
+    if (checkbox.checked) {
+        ringAnimation.classList.remove("hidden");
+        fireworksAnimation.classList.remove("hidden");
+
+        // Remove as animações após 3 segundos
+        setTimeout(() => {
+            ringAnimation.classList.add("hidden");
+            fireworksAnimation.classList.add("hidden");
+        }, 3000);
+    }
+}
+
+// Função para redirecionar para o site após aceitar o pedido
+function acceptMarriage() {
+    // Redireciona para o link após clicar no botão
+    window.location.href = "https://w.app/Pm5v6b";
+}
+
+// Função para mostrar animação de casamento (opcional)
+function showAnimation() {
+    const checkbox = document.getElementById("wantsToMarry");
+    const label = checkbox.nextElementSibling;
+    if (checkbox.checked) {
+        // Animação do anel de casamento e fogos de artifício
+        alert("Anel e fogos de artifício aqui!"); // Exemplo, adicione a animação desejada
+    }
+}
+
+let currentIndex = 0; // Começa no primeiro índice
+const images = document.querySelectorAll('.carousel-image'); // Seleciona todas as imagens do carrossel
+const totalImages = images.length; // Total de imagens no carrossel
+
+// Função para mover o carrossel para a próxima imagem
+function moveCarousel() {
+    currentIndex = (currentIndex + 1) % totalImages; // Incrementa o índice e garante que ele reinicie quando chegar ao fim
+    const carousel = document.querySelector('.carousel');
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`; // Move o carrossel para a posição correta
+}
+
+// Chama a função moveCarousel a cada 1,5 segundos
+setInterval(moveCarousel, 3740); // 1500 milissegundos = 1,5 segundos
+
+// Seleciona o elemento de áudio
+const audio = document.getElementById('myAudio');
+
+// Função para silenciar o áudio
+function muteAudio() {
+    audio.muted = true; // Ativa o mudo
+    console.log("Áudio silenciado!");
+
+    // Após 3 minutos (180.000 milissegundos), desabilita o mudo
+    setTimeout(function() {
+        audio.muted = false; // Desativa o mudo
+        console.log("Áudio ativado novamente!");
+    }, 1000); // 180000 milissegundos = 3 minutos
+}
+
+// Chama a função para silenciar o áudio assim que a página carregar
+muteAudio();
+
+
+// Função para esconder a div por 3 minutos
+        function hideMessage() {
+            const messageDiv = document.getElementById('messageDiv');
+            messageDiv.style.display = 'none'; // Torna a div invisível
+
+            // Após 3 minutos, mostra a div novamente
+            setTimeout(function() {
+                messageDiv.style.display = 'block'; // Torna a div visível novamente
+            }, 3000); // 180000 milissegundos = 3 minutos
+        }
+
+        // Chama a função para esconder a div ao carregar a página
+        window.onload = hideMessage;
+
+    </script>
 </body>
 </html>
